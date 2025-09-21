@@ -4,7 +4,6 @@ import SearchBar from "@/components/home/SearchBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Camera, Clapperboard, Lightbulb, Mic2, Truck, Wrench, UsersRound } from "lucide-react";
-import Layout from "@/components/layout/Layout";
 
 const categories = [
   { name: "Cameras", icon: Camera },
@@ -15,13 +14,15 @@ const categories = [
   { name: "Production", icon: Truck },
 ];
 
+const heroImage = "https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg";
+
 const gear = [
-  { title: "Cinema Camera Body", price: 95 },
-  { title: "Zoom Cine Lens 24-70mm", price: 60 },
-  { title: "LED Panel Light", price: 35 },
-  { title: "Wireless Lav Kit", price: 28 },
-  { title: "Portable Audio Recorder", price: 32 },
-  { title: "Carbon Fiber Tripod", price: 22 },
+  { title: "Cinema Camera Body", price: 95, img: "https://images.pexels.com/photos/11480034/pexels-photo-11480034.jpeg" },
+  { title: "Zoom Cine Lens 24-70mm", price: 60, img: "https://images.pexels.com/photos/13826490/pexels-photo-13826490.jpeg" },
+  { title: "LED Panel Light", price: 35, img: "https://images.pexels.com/photos/6238608/pexels-photo-6238608.jpeg" },
+  { title: "Wireless Lav Kit", price: 28, img: "https://images.pexels.com/photos/8866726/pexels-photo-8866726.jpeg" },
+  { title: "Portable Audio Recorder", price: 32, img: "https://images.pexels.com/photos/11713445/pexels-photo-11713445.jpeg" },
+  { title: "Carbon Fiber Tripod", price: 22, img: "https://images.pexels.com/photos/320617/pexels-photo-320617.jpeg" },
 ];
 
 export default function Index() {
@@ -41,9 +42,11 @@ export default function Index() {
   };
 
   return (
-    <Layout>
+    <>
       {/* HERO */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-b from-zinc-900 via-zinc-900 to-background">
+      <section className="relative isolate overflow-hidden bg-zinc-900">
+        <img src={heroImage} alt="Film production lighting" className="absolute inset-0 -z-10 h-full w-full object-cover" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/60 via-black/40 to-black/40" />
         <div className="container">
           <div className="py-16 md:py-24 text-center text-white">
             <div className="mx-auto max-w-3xl">
@@ -93,7 +96,9 @@ export default function Index() {
         <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {gear.map((g, i) => (
             <Card key={i} className="overflow-hidden">
-              <div className="aspect-[16/9] bg-gradient-to-br from-zinc-200 to-zinc-100 dark:from-zinc-800 dark:to-zinc-700" />
+              <div className="aspect-[16/9] overflow-hidden">
+                <img src={g.img} alt={g.title} className="h-full w-full object-cover" />
+              </div>
               <CardContent className="p-5">
                 <div className="flex items-center justify-between">
                   <div>
@@ -152,6 +157,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }
