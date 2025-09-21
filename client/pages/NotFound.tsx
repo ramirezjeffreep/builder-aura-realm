@@ -13,7 +13,10 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <Placeholder title="Page not found" description="This page doesn’t exist yet. Use the navigation to continue." />
+    <Placeholder
+      title="Page not found"
+      description="This page doesn’t exist yet. Use the navigation to continue."
+    />
   );
 };
 

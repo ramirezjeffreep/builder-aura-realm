@@ -12,25 +12,61 @@ export default function Footer() {
         <div>
           <div className="font-semibold mb-3">Marketplace</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href="/rent" className="hover:text-foreground">Rent Gear</a></li>
-            <li><a href="/buy" className="hover:text-foreground">Buy & Sell</a></li>
-            <li><a href="/crew" className="hover:text-foreground">Find Crew</a></li>
+            <li>
+              <a href="/rent" className="hover:text-foreground">
+                Rent Gear
+              </a>
+            </li>
+            <li>
+              <a href="/buy" className="hover:text-foreground">
+                Buy & Sell
+              </a>
+            </li>
+            <li>
+              <a href="/crew" className="hover:text-foreground">
+                Find Crew
+              </a>
+            </li>
           </ul>
         </div>
         <div>
           <div className="font-semibold mb-3">Company</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href="#" className="hover:text-foreground">About</a></li>
-            <li><a href="#" className="hover:text-foreground">Press</a></li>
-            <li><a href="#" className="hover:text-foreground">Careers</a></li>
+            <li>
+              <a href="#" className="hover:text-foreground">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-foreground">
+                Press
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-foreground">
+                Careers
+              </a>
+            </li>
           </ul>
         </div>
         <div>
           <div className="font-semibold mb-3">Support</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href="#" className="hover:text-foreground">Help Center</a></li>
-            <li><a href="#" className="hover:text-foreground">Safety</a></li>
-            <li><a href="#" className="hover:text-foreground">Contact</a></li>
+            <li>
+              <a href="#" className="hover:text-foreground">
+                Help Center
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-foreground">
+                Safety
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-foreground">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
       </div>

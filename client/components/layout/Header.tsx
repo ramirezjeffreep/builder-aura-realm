@@ -19,7 +19,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-black/40">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-extrabold tracking-tight">
+        <Link
+          to="/"
+          className="flex items-center gap-2 font-extrabold tracking-tight"
+        >
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground shadow">
             <Clapperboard className="h-5 w-5" />
           </span>
@@ -41,8 +44,12 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" className="hidden sm:inline-flex">Sign in</Button>
-          <Button size="sm" className="hidden md:inline-flex"><Camera className="mr-1.5" /> List your gear</Button>
+          <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
+            Sign in
+          </Button>
+          <Button size="sm" className="hidden md:inline-flex">
+            <Camera className="mr-1.5" /> List your gear
+          </Button>
           <Button asChild size="icon" className="md:hidden">
             <UsersRound />
           </Button>
